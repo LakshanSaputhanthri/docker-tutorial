@@ -137,9 +137,22 @@
       ```bash
       usermod -s /bin/bash john
       ```
-    - Delete a user:
+    - Delete a user (`deluser` may not be available in a minimal image — `userdel` is the built-in alternative):
       ```bash
       userdel john
       ```
+
+14. Scripts and execute permissions:
+    - Create a simple script by redirecting output into a file, then view it:
+      ```bash
+      echo echo hello > deploy.sh
+      cat deploy.sh
+      ```
+    - Grant the file owner execute permission (`chmod u+x`), then run it again:
+      ```bash
+      chmod u+x deploy.sh
+      ./deploy.sh
+      ```
+
 
 
